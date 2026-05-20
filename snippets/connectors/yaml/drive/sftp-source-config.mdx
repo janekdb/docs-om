@@ -4,28 +4,27 @@
       type: DriveMetadata
       markDeletedDirectories: true
       markDeletedFiles: true
-      markDeletedSpreadsheets: true
-      markDeletedWorksheets: true
       includeDirectories: true
       includeFiles: true
-      includeSpreadsheets: true
-      includeWorksheets: true
       includeTags: true
       includeOwners: false
       overrideMetadata: false
       useFqnForFiltering: false
       # directoryFilterPattern:
       #   includes:
-      #     - directory1
-      #     - directory2
+      #     - /data/reports/.*
       #   excludes:
-      #     - directory3
-      #     - directory4
+      #     - /data/temp/.*
       # fileFilterPattern:
       #   includes:
       #     - .*\.csv
       #     - .*\.tsv
       #   excludes:
       #     - .*_backup\.csv
+      # SFTP ingests directories and files only.
+      includeSpreadsheets: false
+      includeWorksheets: false
+      markDeletedSpreadsheets: false
+      markDeletedWorksheets: false
       threads: 1
 ```
